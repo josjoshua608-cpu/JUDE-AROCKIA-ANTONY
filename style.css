@@ -1,3 +1,19 @@
+body {
+  background: black;
+  color: white;
+  text-align: center;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: pageFade 0.9s ease forwards;
+}
+
+@keyframes pageFade {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -45,10 +61,10 @@ body {
 }
 
 /* PROFILE */
-.profile-container {
-  margin-top: -110px;
-  position: relative;
-  z-index: 5;
+.content {
+  padding: 20px 20px 60px;
+  max-width: 420px;
+  margin: 0 auto;
 }
 
 
@@ -90,13 +106,39 @@ h1 {
   font-weight: bold;
   text-decoration: none;
   font-size: 20px;
-  transition: 0.25s ease;
+  transition: all 0.25s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+/* hover / touch */
+.btn:hover {
+  transform: translateY(-3px) scale(1.04);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.35);
+}
+
+/* tap effect */
+.btn:active {
+  transform: scale(0.96);
 }
 
 .btn.gold {
   background: #f5a300;
   color: black;
 }
+
+.btn.gold {
+  background: #f5a300;
+  color: black;
+  box-shadow: 0 6px 18px rgba(245,163,0,0.35);
+}
+
+.btn.white {
+  background: #e6e6e6;
+  color: black;
+  box-shadow: 0 6px 18px rgba(255,255,255,0.15);
+}
+
 
 .btn.white {
   background: #e6e6e6;

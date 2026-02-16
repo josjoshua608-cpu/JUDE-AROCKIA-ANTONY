@@ -70,14 +70,13 @@ body {
 
 
 .profile-img {
-  width: 200px;
-  height: 200px;
+  width: 180px;
+  height: 180px;
   border-radius: 50%;
   border: 10px solid black;
   object-fit: cover;
-  object-position: center top;
-  transition: transform 0.4s ease;
 }
+
 
 .profile-img:hover {
   transform: scale(1.05);

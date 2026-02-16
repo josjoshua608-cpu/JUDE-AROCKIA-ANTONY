@@ -1,208 +1,123 @@
-body {
-  background: black;
-  color: white;
-  text-align: center;
-  opacity: 0;
-  animation: pageFade 0.9s ease forwards;
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:'Poppins',sans-serif;
 }
 
-@keyframes pageFade {
-  from {
-    opacity: 0;
+body{
+  background:#000;
+  color:white;
+  text-align:center;
+  overflow-x:hidden;
+}
+
+/* 🔶 HEADER */
+.hero{
+  height:180px;
+  background:#f4a300;
+  position:relative;
+}
+
+/* 🔷 PROFILE WRAPPER */
+.profile-wrapper{
+  position:relative;
+  margin-top:-70px;
+  display:flex;
+  justify-content:center;
+  animation:fadeDown 0.8s ease;
+}
+
+/* 🔵 PROFILE IMAGE */
+.profile-img{
+  width:140px;
+  height:140px;
+  border-radius:50%;
+  border:5px solid #000;
+  object-fit:cover;
+  background:white;
+  box-shadow:0 10px 25px rgba(0,0,0,0.35);
+  transition:transform 0.3s ease;
+}
+
+.profile-img:hover{
+  transform:scale(1.06);
+}
+
+/* 🧑 NAME */
+.name{
+  margin-top:20px;
+  font-size:26px;
+  font-weight:700;
+  color:#f4a300;
+  letter-spacing:1px;
+  animation:fadeUp 1s ease;
+}
+
+/* 💼 TITLE */
+.title{
+  font-size:16px;
+  margin-top:6px;
+  color:#ddd;
+  animation:fadeUp 1.2s ease;
+}
+
+/* ⭐ CONTACT TITLE */
+.contact-title{
+  margin-top:40px;
+  font-size:20px;
+  font-weight:600;
+  animation:fadeUp 1.4s ease;
+}
+
+/* 🔘 ICON ROW */
+.icons{
+  display:flex;
+  justify-content:center;
+  gap:28px;
+  margin-top:25px;
+  flex-wrap:wrap;
+}
+
+/* ⚪ ICON STYLE */
+.icon{
+  width:60px;
+  height:60px;
+  border-radius:50%;
+  border:2px solid #fff;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-size:26px;
+  text-decoration:none;
+  color:white;
+  transition:all 0.3s ease;
+}
+
+.icon:hover{
+  background:#f4a300;
+  border-color:#f4a300;
+  transform:translateY(-4px) scale(1.08);
+}
+
+/* ✨ ANIMATIONS */
+@keyframes fadeDown{
+  from{opacity:0; transform:translateY(-40px);}
+  to{opacity:1; transform:translateY(0);}
+}
+
+@keyframes fadeUp{
+  from{opacity:0; transform:translateY(30px);}
+  to{opacity:1; transform:translateY(0);}
+}
+
+/* 📱 MOBILE */
+@media(max-width:480px){
+  .profile-img{
+    width:120px;
+    height:120px;
   }
-  to {
-    opacity: 1;
-  }
-}
-
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: Arial, Helvetica, sans-serif;
-}
-
-body {
-  background: black;
-  color: white;
-  text-align: center;
-}
-
-/* TOP ORANGE */
-.top-section {
-  background: #f5a300;
-  height: 200px;
-  position: relative;
-}
-
-
-/* DOTS */
-.dots {
-  position: absolute;
-  display: grid;
-  grid-template-columns: repeat(3, 10px);
-  gap: 12px;
-}
-
-.dots span {
-  width: 10px;
-  height: 10px;
-  background: black;
-  border-radius: 50%;
-}
-
-.dots.left {
-  top: 40px;
-  left: 40px;
-}
-
-.dots.right {
-  top: 40px;
-  right: 40px;
-}
-
-/* PROFILE */
-.content {
-  padding: 20px 20px 60px;
-  max-width: 420px;
-  margin: 0 auto;
-}
-
-
-.profile-img {
-  width: 180px;
-  height: 180px;
-  border-radius: 50%;
-  border: 10px solid black;
-  object-fit: cover;
-}
-
-
-.profile-img:hover {
-  transform: scale(1.05);
-}
-
-/* CONTENT */
-.content {
-  padding: 30px 20px 60px;
-}
-
-h1 {
-  color: #f5a300;
-  font-size: 32px;
-  margin-top: 20px;
-  font-weight: bold;
-}
-
-.subtitle {
-  color: #ccc;
-  margin: 10px 0 30px;
-  font-size: 20px;
-}
-
-/* BUTTONS */
-.btn {
-  display: block;
-  width: 85%;
-  max-width: 340px;
-  margin: 18px auto;
-  padding: 18px;
-  border-radius: 40px;
-  font-weight: bold;
-  text-decoration: none;
-  font-size: 20px;
-  transition: all 0.25s ease;
-  position: relative;
-  overflow: hidden;
-}
-
-/* hover / touch */
-.btn:hover {
-  transform: translateY(-3px) scale(1.04);
-  box-shadow: 0 10px 25px rgba(0,0,0,0.35);
-}
-
-/* tap effect */
-.btn:active {
-  transform: scale(0.96);
-}
-
-.btn.gold {
-  background: #f5a300;
-  color: black;
-}
-
-.btn.gold {
-  background: #f5a300;
-  color: black;
-  box-shadow: 0 6px 18px rgba(245,163,0,0.35);
-}
-
-.btn.white {
-  background: #e6e6e6;
-  color: black;
-  box-shadow: 0 6px 18px rgba(255,255,255,0.15);
-}
-
-
-.btn.white {
-  background: #e6e6e6;
-  color: black;
-}
-
-.btn:hover {
-  transform: scale(1.05);
-}
-
-/* FOOTER TEXT */
-.footer-text {
-  margin-top: 40px;
-  color: #ccc;
-  font-size: 16px;
-  line-height: 1.6;
-  padding: 0 20px;
-}
-
-/* MOBILE PERFECT */
-@media (max-width: 480px) {
-  h1 {
-    font-size: 26px;
-  }
-
-  .subtitle {
-    font-size: 18px;
-  }
-
-  .profile-img {
-    width: 150px;
-    height: 150px;
-  }
-}
-
-/* ===== STAGGER INTRO ===== */
-
-.profile-container,
-h1,
-.subtitle,
-.btn,
-.footer-text {
-  opacity: 0;
-  transform: translateY(25px);
-  animation: revealUp 0.8s ease forwards;
-}
-
-.profile-container { animation-delay: 0.2s; }
-h1 { animation-delay: 0.4s; }
-.subtitle { animation-delay: 0.6s; }
-.btn:nth-of-type(1) { animation-delay: 0.8s; }
-.btn:nth-of-type(2) { animation-delay: 1.0s; }
-.btn:nth-of-type(3) { animation-delay: 1.2s; }
-.btn:nth-of-type(4) { animation-delay: 1.4s; }
-.footer-text { animation-delay: 1.6s; }
-
-@keyframes revealUp {
-  to {
-    opacity: 1;
-    transform: translateY(0);
+  .name{
+    font-size:22px;
   }
 }

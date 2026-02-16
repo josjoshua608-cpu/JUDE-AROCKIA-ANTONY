@@ -45,8 +45,11 @@ body {
 
 /* PROFILE */
 .profile-container {
-  margin-top: -90px;
+  margin-top: -110px;
+  position: relative;
+  z-index: 5;
 }
+
 
 .profile-img {
   width: 180px;

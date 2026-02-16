@@ -54,6 +54,7 @@ body {
   border-radius: 50%;
   border: 10px solid black;
   object-fit: cover;
+  object-position: center top;
 }
 
 /* CONTENT */

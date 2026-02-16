@@ -14,9 +14,10 @@ body {
 /* TOP ORANGE */
 .top-section {
   background: #f5a300;
-  height: 220px;
+  height: 200px;
   position: relative;
 }
+
 
 /* DOTS */
 .dots {

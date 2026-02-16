@@ -3,14 +3,15 @@ body {
   color: white;
   text-align: center;
   opacity: 0;
-  transform: translateY(20px);
   animation: pageFade 0.9s ease forwards;
 }
 
 @keyframes pageFade {
+  from {
+    opacity: 0;
+  }
   to {
     opacity: 1;
-    transform: translateY(0);
   }
 }
 
@@ -69,12 +70,17 @@ body {
 
 
 .profile-img {
-  width: 180px;
-  height: 180px;
+  width: 200px;
+  height: 200px;
   border-radius: 50%;
   border: 10px solid black;
   object-fit: cover;
   object-position: center top;
+  transition: transform 0.4s ease;
+}
+
+.profile-img:hover {
+  transform: scale(1.05);
 }
 
 /* CONTENT */
@@ -171,5 +177,33 @@ h1 {
   .profile-img {
     width: 150px;
     height: 150px;
+  }
+}
+
+/* ===== STAGGER INTRO ===== */
+
+.profile-container,
+h1,
+.subtitle,
+.btn,
+.footer-text {
+  opacity: 0;
+  transform: translateY(25px);
+  animation: revealUp 0.8s ease forwards;
+}
+
+.profile-container { animation-delay: 0.2s; }
+h1 { animation-delay: 0.4s; }
+.subtitle { animation-delay: 0.6s; }
+.btn:nth-of-type(1) { animation-delay: 0.8s; }
+.btn:nth-of-type(2) { animation-delay: 1.0s; }
+.btn:nth-of-type(3) { animation-delay: 1.2s; }
+.btn:nth-of-type(4) { animation-delay: 1.4s; }
+.footer-text { animation-delay: 1.6s; }
+
+@keyframes revealUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
 }

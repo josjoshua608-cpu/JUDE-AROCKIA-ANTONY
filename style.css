@@ -12,112 +12,158 @@ body{
   overflow-x:hidden;
 }
 
-/* 🔶 HEADER */
+/* 🔶 HERO SPLIT */
 .hero{
-  height:180px;
-  background:#f4a300;
+  height:260px;
+  background:#f5a400;
   position:relative;
 }
 
-/* 🔷 PROFILE WRAPPER */
+/* 🔳 DOT PATTERN */
+.dots{
+  position:absolute;
+  width:70px;
+  height:70px;
+  background-image: radial-gradient(#000 4px, transparent 4px);
+  background-size: 22px 22px;
+  opacity:0.9;
+}
+
+.dots.left{
+  top:40px;
+  left:40px;
+}
+
+.dots.right{
+  top:40px;
+  right:40px;
+}
+
+/* 🔵 PROFILE */
 .profile-wrapper{
-  position:relative;
-  margin-top:-70px;
+  margin-top:-95px;
   display:flex;
   justify-content:center;
-  animation:fadeDown 0.8s ease;
+  animation:fadeDown 0.9s ease;
 }
 
-/* 🔵 PROFILE IMAGE */
 .profile-img{
-  width:140px;
-  height:140px;
+  width:170px;
+  height:170px;
   border-radius:50%;
-  border:5px solid #000;
+  border:8px solid #000;
   object-fit:cover;
   background:white;
-  box-shadow:0 10px 25px rgba(0,0,0,0.35);
-  transition:transform 0.3s ease;
+  box-shadow:0 15px 35px rgba(0,0,0,0.5);
+  transition:all 0.35s ease;
 }
 
 .profile-img:hover{
-  transform:scale(1.06);
+  transform:scale(1.05);
+}
+
+/* 📦 CONTENT */
+.content{
+  padding:30px 20px 60px;
 }
 
 /* 🧑 NAME */
 .name{
-  margin-top:20px;
-  font-size:26px;
-  font-weight:700;
-  color:#f4a300;
-  letter-spacing:1px;
+  font-size:32px;
+  font-weight:800;
+  color:#f5a400;
+  margin-top:10px;
   animation:fadeUp 1s ease;
 }
 
 /* 💼 TITLE */
 .title{
-  font-size:16px;
-  margin-top:6px;
+  font-size:20px;
   color:#ddd;
+  margin-top:6px;
   animation:fadeUp 1.2s ease;
 }
 
-/* ⭐ CONTACT TITLE */
-.contact-title{
+/* 🔘 BUTTON AREA */
+.buttons{
   margin-top:40px;
-  font-size:20px;
-  font-weight:600;
+  display:flex;
+  flex-direction:column;
+  gap:22px;
+  align-items:center;
+}
+
+/* 🟡 BUTTON BASE */
+.btn{
+  width:85%;
+  max-width:420px;
+  padding:18px 20px;
+  border-radius:50px;
+  text-decoration:none;
+  font-size:22px;
+  font-weight:700;
+  letter-spacing:1px;
+  transition:all 0.35s ease;
   animation:fadeUp 1.4s ease;
 }
 
-/* 🔘 ICON ROW */
-.icons{
-  display:flex;
-  justify-content:center;
-  gap:28px;
-  margin-top:25px;
-  flex-wrap:wrap;
+/* 🟡 GOLD BUTTON */
+.btn.gold{
+  background:#f5a400;
+  color:#000;
 }
 
-/* ⚪ ICON STYLE */
-.icon{
-  width:60px;
-  height:60px;
-  border-radius:50%;
-  border:2px solid #fff;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  font-size:26px;
-  text-decoration:none;
-  color:white;
-  transition:all 0.3s ease;
+/* ⚪ LIGHT BUTTON */
+.btn.light{
+  background:#d9d9d9;
+  color:#000;
 }
 
-.icon:hover{
-  background:#f4a300;
-  border-color:#f4a300;
-  transform:translateY(-4px) scale(1.08);
+/* ✨ BUTTON HOVER */
+.btn:hover{
+  transform:translateY(-4px) scale(1.03);
+  box-shadow:0 10px 25px rgba(0,0,0,0.4);
+}
+
+/* 📝 FOOTER TEXT */
+.footer-text{
+  margin-top:45px;
+  color:#ccc;
+  font-size:18px;
+  line-height:1.6;
+  padding:0 15px;
+  animation:fadeUp 1.6s ease;
 }
 
 /* ✨ ANIMATIONS */
 @keyframes fadeDown{
-  from{opacity:0; transform:translateY(-40px);}
+  from{opacity:0; transform:translateY(-50px);}
   to{opacity:1; transform:translateY(0);}
 }
 
 @keyframes fadeUp{
-  from{opacity:0; transform:translateY(30px);}
+  from{opacity:0; transform:translateY(40px);}
   to{opacity:1; transform:translateY(0);}
 }
 
 /* 📱 MOBILE */
 @media(max-width:480px){
+
   .profile-img{
-    width:120px;
-    height:120px;
+    width:140px;
+    height:140px;
   }
+
   .name{
-    font-size:22px;
+    font-size:24px;
+  }
+
+  .btn{
+    font-size:18px;
+    padding:16px;
+  }
+
+  .hero{
+    height:230px;
   }
 }

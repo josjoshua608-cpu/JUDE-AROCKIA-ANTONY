@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>P. Jude Arockia Antony</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+  <!-- Top Orange Section -->
+  <div class="top-section">
+
+    <div class="dots left">
+      <span></span><span></span><span></span>
+      <span></span><span></span><span></span>
+      <span></span><span></span><span></span>
+    </div>
+
+    <div class="dots right">
+      <span></span><span></span><span></span>
+      <span></span><span></span><span></span>
+      <span></span><span></span><span></span>
+    </div>
+
+  </div>
+
+  <!-- Profile -->
+  <div class="profile-container">
+    <img src="profile.jpg" alt="Profile" class="profile-img"/>
+  </div>
+
+  <!-- Main Content -->
+  <div class="content">
+
+    <h1>P. JUDE AROCKIA ANTONY</h1>
+    <p class="subtitle">Chief Life Insurance Advisor</p>
+
+    <a href="#" class="btn gold">ABOUT ME</a>
+    <a href="#" class="btn white">WHATSAPP</a>
+    <a href="#" class="btn gold">WEBSITE</a>
+    <a href="#" class="btn white">CONTACT</a>
+
+    <p class="footer-text">
+      Helping families stay financially protected with
+      simple and reliable life insurance guidance.
+    </p>
+
+  </div>
+
+</body>
+</html>
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+  background: black;
+  color: white;
+  text-align: center;
+}
+
+/* TOP ORANGE */
+.top-section {
+  background: #f5a300;
+  height: 220px;
+  position: relative;
+}
+
+/* DOTS */
+.dots {
+  position: absolute;
+  display: grid;
+  grid-template-columns: repeat(3, 10px);
+  gap: 12px;
+}
+
+.dots span {
+  width: 10px;
+  height: 10px;
+  background: black;
+  border-radius: 50%;
+}
+
+.dots.left {
+  top: 40px;
+  left: 40px;
+}
+
+.dots.right {
+  top: 40px;
+  right: 40px;
+}
+
+/* PROFILE */
+.profile-container {
+  margin-top: -90px;
+}
+
+.profile-img {
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  border: 10px solid black;
+  object-fit: cover;
+}
+
+/* CONTENT */
+.content {
+  padding: 30px 20px 60px;
+}
+
+h1 {
+  color: #f5a300;
+  font-size: 32px;
+  margin-top: 20px;
+  font-weight: bold;
+}
+
+.subtitle {
+  color: #ccc;
+  margin: 10px 0 30px;
+  font-size: 20px;
+}
+
+/* BUTTONS */
+.btn {
+  display: block;
+  width: 85%;
+  max-width: 340px;
+  margin: 18px auto;
+  padding: 18px;
+  border-radius: 40px;
+  font-weight: bold;
+  text-decoration: none;
+  font-size: 20px;
+  transition: 0.25s ease;
+}
+
+.btn.gold {
+  background: #f5a300;
+  color: black;
+}
+
+.btn.white {
+  background: #e6e6e6;
+  color: black;
+}
+
+.btn:hover {
+  transform: scale(1.05);
+}
+
+/* FOOTER TEXT */
+.footer-text {
+  margin-top: 40px;
+  color: #ccc;
+  font-size: 16px;
+  line-height: 1.6;
+  padding: 0 20px;
+}
+
+/* MOBILE PERFECT */
+@media (max-width: 480px) {
+  h1 {
+    font-size: 26px;
+  }
+
+  .subtitle {
+    font-size: 18px;
+  }
+
+  .profile-img {
+    width: 150px;
+    height: 150px;
+  }
+}
+
